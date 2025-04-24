@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.baitap8"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.baitap8"
@@ -29,6 +29,10 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -40,4 +44,10 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation (libs.glide)
+    annotationProcessor(libs.glideAnnotation)
+    implementation(libs.circleindicator)
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.android.image.slider)
 }
